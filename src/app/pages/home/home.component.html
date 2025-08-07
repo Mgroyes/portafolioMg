@@ -1,11 +1,43 @@
-<!-- Fondo con imagen -->
-<div class="relative h-screen bg-cover bg-center" style="background-image: url('assets/fondo.jpg')">
-  <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-    <button
-      routerLink="/dashboard"
-      class="px-8 py-4 text-white text-xl font-semibold bg-indigo-600 rounded-lg hover:bg-indigo-700 transition"
-    >
-      Ver más
-    </button>
+<!-- Pantalla de ingreso con fondo actualizado -->
+<div class="relative min-h-screen bg-cover bg-center" style="background-image: url('/assets/imgs/backgrondportada.png')">
+  <!-- Overlay oscuro -->
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+  <!-- Contenedor de logo y texto UX/UI -->
+<div class="absolute top-6 left-0 right-0 px-6 flex flex-col items-center gap-2 md:flex-row md:items-center md:justify-between z-10">
+  <!-- Línea + Logo a la izquierda -->
+  <div class="flex items-center gap-2 md:ml-6">
+    <span class="hidden md:inline-block w-12 h-px bg-white"></span>
+    <img src="assets/imgs/logoblanco.png" alt="Logo" class="w-7" />
+  </div>
+
+    <!-- Texto Designer UX-UI -->
+    <div class="flex flex-col md:flex-row md:items-center md:gap-2 text-xs text-white text-center md:text-right md:mr-6">
+      <span>Designer web UX-UI</span>
+      <span class="w-12 h-px bg-white hidden md:inline-block"></span>
+    </div>
+  </div>
+
+  <!-- Contenido principal centrado -->
+  <div class="relative z-10 flex items-center justify-center min-h-screen px-4">
+    <div class="max-w-xl w-full border-l-0 md:border-l-4 border-lime-500 pl-0 md:pl-6 text-white text-center md:text-left">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-lime-500 mb-6">
+        ¿Tienes una idea en mente?
+      </h1>
+      <p class="text-lg md:text-xl mb-4">
+        Ya sea una tienda online, una web o una app, <br class="hidden md:block" />
+        puedo ayudarte a darle vida.
+      </p>
+      <p class="text-lg md:text-xl font-bold mb-8">
+        Diseñemos juntos experiencias digitales <br class="hidden md:block" />
+        que conecten y destaquen.
+      </p>
+      <button
+        routerLink="/dashboard"
+        class="px-8 py-3 bg-gradient-to-r from-lime-500 to-green-600 text-white text-lg font-semibold rounded-md hover:brightness-110 transition"
+      >
+        Ver más
+      </button>
+    </div>
   </div>
 </div>
