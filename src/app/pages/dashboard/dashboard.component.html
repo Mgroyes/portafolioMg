@@ -13,8 +13,8 @@
         Como diseñadores y desarrolladores, lideramos procesos integrales que combinan creatividad, estrategia y
         tecnología.
       </p>
-      <button
-        class="mt-2 bg-[#003366] text-lime-400 text-sm font-semibold px-6 py-2 rounded-md hover:brightness-110 transition">
+      <button class="mt-2 bg-[#003366] text-lime-400 text-sm font-semibold px-6 py-2 rounded-md 
+         hover:bg-lime-400 hover:text-[#003366] transition-colors duration-300">
         Contáctanos
       </button>
     </div>
@@ -112,8 +112,8 @@
           {{ currentText }}
         </p>
 
-        <button (click)="toggleBenefits()"
-          class="bg-[#003366] text-lime-400 font-semibold px-6 py-2 rounded-md hover:brightness-110 transition"
+        <button (click)="toggleBenefits()" class="bg-[#003366] text-lime-400 font-semibold px-6 py-2 rounded-md 
+         hover:bg-lime-400 hover:text-[#003366] transition-colors duration-300"
           *ngIf="tabsContent[selectedTab]?.benefits">
           {{ showBenefits ? 'Volver' : 'Beneficios' }}
         </button>
@@ -181,7 +181,7 @@
           }
 
           100% {
-            transform: translateX(-55%);
+            transform: translateX(-57%);
           }
         }
 
@@ -197,11 +197,33 @@
       <!-- Contenido Portafolio -->
       <div *ngIf="selectedSection === 'portafolio'" class="w-full">
         <p class="text-gray-700 mb-9 my-9 max-w-4xl text-center md:text-left">
-          Aquí puedes ver algunos de nuestros trabajos destacados.
-          Cada pieza refleja nuestro enfoque en la calidad, funcionalidad y estética.
-          Muy pronto publicaremos una galería interactiva.
+          Conoce más sobre nuestra experiencia explorando proyectos de diseño web,
+          desarrollo fullstack <br> y colaboraciones con distintas compañías. <br>
+
+          En Behance encontrarás trabajos visuales y propuestas de interfaz, mientras
+          que en GitHub  <br> puedes ver implementaciones técnicas y soluciones funcionales.
+          Cada proyecto refleja nuestro  <br> enfoque creativo, técnico y colaborativo.
         </p>
+
+        <!-- Botones con Font Awesome -->
+        <div class="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start">
+          <!-- Botón Behance -->
+          <a href="https://www.behance.net/tu_usuario" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#003366] text-lime-400 text-sm font-semibold px-6 py-2 rounded-md
+              hover:bg-lime-400 hover:text-[#003366] transition-colors duration-300">
+            <i class="fab fa-behance text-lg"></i>
+            Ver proyectos
+          </a>
+
+          <!-- Botón GitHub -->
+          <a href="https://github.com/tu_usuario" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#003366] text-lime-400 text-sm font-semibold px-6 py-2 rounded-md
+              hover:bg-lime-400 hover:text-[#003366] transition-colors duration-300">
+            <i class="fab fa-github text-lg"></i>
+            Ver implementaciones
+          </a>
+        </div>
       </div>
+
+
 
       <!-- Contenido Testimonios -->
       <div *ngIf="selectedSection === 'testimonios'" class="w-full">
