@@ -1,20 +1,18 @@
+<!-- Hero / Presentación -->
 <div class="w-full flex justify-center px-4 py-32 bg-white">
   <div
     class="relative bg-[#EFEFF0] rounded-2xl shadow-md p-6 md:p-20 flex flex-col md:flex-row items-center md:items-start justify-between max-w-6xl w-full overflow-visible pb-40 md:pb-20">
-    <!-- Contenido de texto y logo -->
+    <!-- Texto principal -->
     <div class="z-10 w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-4">
       <img src="assets/imgs/logoo.png" alt="Logo" class="w-12 h-12 object-contain" />
-
       <h2 class="text-xl md:text-2xl font-bold text-[#0f2c47] leading-tight">
         Diseño visual y desarrollo web desde <br />
         la idea hasta el producto final.
       </h2>
-
       <p class="text-sm md:text-base text-[#3d4f63]">
-        Como diseñadores y desarrolladores, lideramos procesos integrales que
-        combinan creatividad, estrategia y tecnología.
+        Como diseñadores y desarrolladores, lideramos procesos integrales que combinan creatividad, estrategia y
+        tecnología.
       </p>
-
       <button
         class="mt-2 bg-[#003366] text-lime-400 text-sm font-semibold px-6 py-2 rounded-md hover:brightness-110 transition">
         Contáctanos
@@ -28,90 +26,190 @@
   </div>
 </div>
 
-<!-- Bloque Servicios -->
+<!-- Sección principal con steps -->
 <section class="w-full flex justify-center px-4 py-8 pb-24 bg-white">
   <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8">
 
     <!-- Sidebar Steps -->
-    <div class="flex flex-col items-center md:items-start  space-y-8 relative">
-      <!-- Línea vertical decorativa -->
+    <div class="flex flex-col items-center md:items-start space-y-8 relative">
       <div class="hidden md:block absolute left-[5px] top-0 w-[2px] h-full bg-gray-300"></div>
 
-      <!-- Servicios -->
-      <div class="flex items-center gap-3 group cursor-pointer justify-center md:justify-start relative z-10">
-        <div class="w-4 h-4 rounded-full bg-lime-500 transition-transform duration-300 group-hover:scale-125"></div>
-        <span class="font-bold text-[#0f2c47] transition-transform duration-300 group-hover:scale-110">Servicios</span>
+      <div (click)="setSection('servicios')"
+        class="flex items-center gap-3 group cursor-pointer justify-center md:justify-start relative z-10">
+        <div class="w-4 h-4 rounded-full transition-transform duration-300 group-hover:scale-125"
+          [ngClass]="{ 'bg-lime-500': selectedSection === 'servicios', 'bg-[#0f2c47]': selectedSection !== 'servicios' }">
+        </div>
+        <span [ngClass]="{
+          'font-bold text-[#0f2c47]': selectedSection === 'servicios',
+          'text-lime-500 font-semibold': selectedSection !== 'servicios'
+        }" class="transition-transform duration-300 group-hover:scale-110">Servicios</span>
       </div>
 
-      <!-- Nosotros -->
-      <div class="flex items-center gap-3 group cursor-pointer justify-center md:justify-start relative z-10">
-        <div class="w-3 h-3 rounded-full bg-[#0f2c47] transition-transform duration-300 group-hover:scale-125"></div>
-        <span
-          class="text-lime-500 font-semibold transition-transform duration-300 group-hover:scale-110">Nosotros</span>
+      <div (click)="setSection('nosotros')"
+        class="flex items-center gap-3 group cursor-pointer justify-center md:justify-start relative z-10">
+        <div class="w-3 h-3 rounded-full transition-transform duration-300 group-hover:scale-125"
+          [ngClass]="{ 'bg-lime-500': selectedSection === 'nosotros', 'bg-[#0f2c47]': selectedSection !== 'nosotros' }">
+        </div>
+        <span [ngClass]="{
+          'font-bold text-[#0f2c47]': selectedSection === 'nosotros',
+          'text-lime-500 font-semibold': selectedSection !== 'nosotros'
+        }" class="transition-transform duration-300 group-hover:scale-110">Nosotros</span>
       </div>
 
-      <!-- Portafolio -->
-      <div class="flex items-center gap-3 group cursor-pointer justify-center md:justify-start relative z-10">
-        <div class="w-3 h-3 rounded-full bg-[#0f2c47] transition-transform duration-300 group-hover:scale-125"></div>
-        <span
-          class="text-lime-500 font-semibold transition-transform duration-300 group-hover:scale-110">Portafolio</span>
+      <div (click)="setSection('portafolio')"
+        class="flex items-center gap-3 group cursor-pointer justify-center md:justify-start relative z-10">
+        <div class="w-3 h-3 rounded-full transition-transform duration-300 group-hover:scale-125"
+          [ngClass]="{ 'bg-lime-500': selectedSection === 'portafolio', 'bg-[#0f2c47]': selectedSection !== 'portafolio' }">
+        </div>
+        <span [ngClass]="{
+          'font-bold text-[#0f2c47]': selectedSection === 'portafolio',
+          'text-lime-500 font-semibold': selectedSection !== 'portafolio'
+        }" class="transition-transform duration-300 group-hover:scale-110">Portafolio</span>
       </div>
 
-      <!-- Testimonios -->
-      <div class="flex items-center gap-3 group cursor-pointer justify-center md:justify-start relative z-10">
-        <div class="w-3 h-3 rounded-full bg-[#0f2c47] transition-transform duration-300 group-hover:scale-125"></div>
-        <span
-          class="text-lime-500 font-semibold transition-transform duration-300 group-hover:scale-110">Testimonios</span>
+      <div (click)="setSection('testimonios')"
+        class="flex items-center gap-3 group cursor-pointer justify-center md:justify-start relative z-10">
+        <div class="w-3 h-3 rounded-full transition-transform duration-300 group-hover:scale-125"
+          [ngClass]="{ 'bg-lime-500': selectedSection === 'testimonios', 'bg-[#0f2c47]': selectedSection !== 'testimonios' }">
+        </div>
+        <span [ngClass]="{
+          'font-bold text-[#0f2c47]': selectedSection === 'testimonios',
+          'text-lime-500 font-semibold': selectedSection !== 'testimonios'
+        }" class="transition-transform duration-300 group-hover:scale-110">Testimonios</span>
       </div>
     </div>
 
-    <!-- Contenido Tabs -->
+    <!-- Contenido dinámico por sección -->
     <div class="flex flex-col items-center md:items-start text-center md:text-left">
-      <!-- Tabs -->
-      <!-- Tabs -->
-      <div
-        class="flex flex-col sm:flex-row sm:flex-wrap sm:gap-20 border-b border-gray-300 mb-4 w-full items-center sm:items-start max-w-[300px] mx-auto sm:max-w-none">
 
-        <button (click)="selectTab('ux')" [ngClass]="{
-      'font-semibold text-[#0f2c47] border-b-2 border-[#0f2c47]': selectedTab === 'ux',
-      'text-gray-500 hover:text-[#0f2c47]': selectedTab !== 'ux'
-    }" class="pb-2 text-center w-full sm:w-auto">
-          Diseño UX/UI
-        </button>
+      <!-- Contenido Servicios con Tabs -->
+      <div *ngIf="selectedSection === 'servicios'" class="w-full">
+        <div
+          class="flex flex-col sm:flex-row sm:flex-wrap sm:gap-20 border-b border-gray-300 mb-4 w-full items-center sm:items-start max-w-[300px] mx-auto sm:max-w-none">
+          <button (click)="selectTab('ux')"
+            [ngClass]="{ 'font-semibold text-[#0f2c47] border-b-2 border-[#0f2c47]': selectedTab === 'ux', 'text-gray-500 hover:text-[#0f2c47]': selectedTab !== 'ux' }"
+            class="pb-2 text-center w-full sm:w-auto">
+            Diseño UX/UI
+          </button>
+          <button (click)="selectTab('web')"
+            [ngClass]="{ 'font-semibold text-[#0f2c47] border-b-2 border-[#0f2c47]': selectedTab === 'web', 'text-gray-500 hover:text-[#0f2c47]': selectedTab !== 'web' }"
+            class="pb-2 text-center w-full sm:w-auto">
+            Diseño Web
+          </button>
+          <button (click)="selectTab('apps')"
+            [ngClass]="{ 'font-semibold text-[#0f2c47] border-b-2 border-[#0f2c47]': selectedTab === 'apps', 'text-gray-500 hover:text-[#0f2c47]': selectedTab !== 'apps' }"
+            class="pb-2 text-center w-full sm:w-auto">
+            Diseño de aplicaciones
+          </button>
+          <button (click)="selectTab('consultoria')"
+            [ngClass]="{ 'font-semibold text-[#0f2c47] border-b-2 border-[#0f2c47]': selectedTab === 'consultoria', 'text-gray-500 hover:text-[#0f2c47]': selectedTab !== 'consultoria' }"
+            class="pb-2 text-center w-full sm:w-auto">
+            Consultoría
+          </button>
+        </div>
 
-        <button (click)="selectTab('web')" [ngClass]="{
-      'font-semibold text-[#0f2c47] border-b-2 border-[#0f2c47]': selectedTab === 'web',
-      'text-gray-500 hover:text-[#0f2c47]': selectedTab !== 'web'
-    }" class="pb-2 text-center w-full sm:w-auto">
-          Diseño Web
-        </button>
+        <p class="text-gray-700 mb-9 my-9 max-w-4xl text-center md:text-left whitespace-pre-line">
+          {{ currentText }}
+        </p>
 
-        <button (click)="selectTab('apps')" [ngClass]="{
-      'font-semibold text-[#0f2c47] border-b-2 border-[#0f2c47]': selectedTab === 'apps',
-      'text-gray-500 hover:text-[#0f2c47]': selectedTab !== 'apps'
-    }" class="pb-2 text-center w-full sm:w-auto">
-          Diseño de aplicaciones
-        </button>
-
-        <button (click)="selectTab('consultoria')" [ngClass]="{
-      'font-semibold text-[#0f2c47] border-b-2 border-[#0f2c47]': selectedTab === 'consultoria',
-      'text-gray-500 hover:text-[#0f2c47]': selectedTab !== 'consultoria'
-    }" class="pb-2 text-center w-full sm:w-auto">
-          Consultoría
+        <button (click)="toggleBenefits()"
+          class="bg-[#003366] text-lime-400 font-semibold px-6 py-2 rounded-md hover:brightness-110 transition"
+          *ngIf="tabsContent[selectedTab]?.benefits">
+          {{ showBenefits ? 'Volver' : 'Beneficios' }}
         </button>
       </div>
 
-      <!-- Texto -->
-      <p class="text-gray-700 mb-9 my-9 max-w-4xl text-center md:text-left whitespace-pre-line">
-        {{ currentText }}
-      </p>
+      <!-- Contenido Nosotros -->
+      <div *ngIf="selectedSection === 'nosotros'" class="w-full">
+        <p class="text-gray-700 mb-9 my-9 max-w-4xl text-center md:text-left mx-auto">
+          Somos un equipo apasionado por el diseño, la experiencia del usuario y el desarrollo digital.
+          Nos enfocamos en crear soluciones únicas, pensadas desde la estrategia y la creatividad.
+          Con cada proyecto buscamos generar impacto y valor.
+        </p>
 
-      <!-- Botón -->
-      <button (click)="toggleBenefits()"
-        class="bg-[#003366] text-lime-400 font-semibold px-6 py-2 rounded-md hover:brightness-110 transition"
-        *ngIf="tabsContent[selectedTab]?.benefits">
-        {{ showBenefits ? 'Volver' : 'Beneficios' }}
-      </button>
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10">
+          <!-- Card 1 -->
+          <div
+            class="bg-[#F1F1F1] shadow-lg rounded-xl p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
+            <img src="assets/imgs/Group 5.png" alt="Icono 1" class="w-16 h-16 mb-4">
+            <p class="text-gray-600 text-sm">
+              Creemos en el poder de unir diseño, tecnología y estrategia para crear
+              experiencias digitales que generen impacto.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-[#F1F1F1] shadow-lg rounded-xl p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
+            <img src="assets/imgs/Group 8.png" alt="Icono 2" class="w-16 h-16 mb-4">
+            <p class="text-gray-600 text-sm">
+              Trabajamos de forma interdisciplinaria, combinando perfiles creativos
+              y técnicos para abordar cada proyecto desde una visión integral.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-[#F1F1F1] shadow-lg rounded-xl p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
+            <img src="assets/imgs/Group 9.png" alt="Icono 3" class="w-16 h-16 mb-4">
+            <p class="text-gray-600 text-sm">
+              Nos apasiona entender a fondo las ideas, potenciarlas y transformarlas
+              en soluciones funcionales, estéticas y sostenibles.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slider animado solo en móviles -->
+        <div class="overflow-hidden relative w-full bg-white py-6 block md:hidden">
+          <div class="flex animate-scroll">
+            <img src="assets/imgs/logoss.png" alt="Logos" class="h-16 mx-8">
+
+          </div>
+        </div>
+
+        <!-- Imagen estática en pantallas md+ -->
+        <div class="hidden md:flex justify-center w-full bg-white py-6">
+          <img src="assets/imgs/logoss.png" alt="Logos" class="h-16">
+        </div>
+      </div>
+
+      <style>
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+
+          100% {
+            transform: translateX(-55%);
+          }
+        }
+
+        .animate-scroll {
+          animation: scroll 9s linear infinite;
+          width: max-content;
+        }
+      </style>
+
+
+
+
+      <!-- Contenido Portafolio -->
+      <div *ngIf="selectedSection === 'portafolio'" class="w-full">
+        <p class="text-gray-700 mb-9 my-9 max-w-4xl text-center md:text-left">
+          Aquí puedes ver algunos de nuestros trabajos destacados.
+          Cada pieza refleja nuestro enfoque en la calidad, funcionalidad y estética.
+          Muy pronto publicaremos una galería interactiva.
+        </p>
+      </div>
+
+      <!-- Contenido Testimonios -->
+      <div *ngIf="selectedSection === 'testimonios'" class="w-full">
+        <p class="text-gray-700 mb-9 my-9 max-w-4xl text-center md:text-left">
+          Las experiencias de nuestros clientes hablan por sí solas.
+          Sus testimonios reflejan nuestro compromiso con la excelencia y los resultados tangibles.
+        </p>
+      </div>
 
     </div>
   </div>

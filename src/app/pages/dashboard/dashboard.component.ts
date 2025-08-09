@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-// 🔒 Definimos tipo seguro para las claves del objeto tabsContent
+// Tipos seguros para tabs y secciones
 type TabKey = 'ux' | 'web' | 'apps' | 'consultoria';
+type SectionKey = 'servicios' | 'nosotros' | 'portafolio' | 'testimonios';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,10 +13,12 @@ type TabKey = 'ux' | 'web' | 'apps' | 'consultoria';
   styleUrl: './dashboard.component.css',
 })
 export class DashboardComponent {
-  selectedTab: TabKey = 'ux'; // Tab seleccionado por defecto
+  // Estado de tabs y secciones
+  selectedTab: TabKey = 'ux';
+  selectedSection: SectionKey = 'servicios';
   showBenefits: boolean = false;
 
-  // ✅ Definimos los textos para cada tab con tipo seguro
+  // Contenido para cada tab
   tabsContent: Record<TabKey, { default: string; benefits: string }> = {
     ux: {
       default: `Soluciones de diseño centradas en el usuario que combinan estética y funcionalidad.
@@ -54,18 +57,24 @@ en lo que realmente genera valor y resultados medibles.`
     }
   };
 
-  // 🧠 Cambia de tab y reinicia la vista de beneficios
+  // Cambia de tab
   selectTab(tabKey: TabKey): void {
     this.selectedTab = tabKey;
     this.showBenefits = false;
   }
 
-  // 🔄 Alterna entre texto normal y beneficios
+  // Alterna beneficios
   toggleBenefits(): void {
     this.showBenefits = !this.showBenefits;
   }
 
-  // 📄 Devuelve el texto actual según estado
+  // Cambia de sección (step lateral)
+  setSection(section: SectionKey): void {
+    this.selectedSection = section;
+    this.showBenefits = false;
+  }
+
+  // Devuelve el texto actual
   get currentText(): string {
     const tab = this.tabsContent[this.selectedTab];
     return this.showBenefits ? tab.benefits : tab.default;
