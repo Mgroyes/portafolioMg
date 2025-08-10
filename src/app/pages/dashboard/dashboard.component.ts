@@ -40,10 +40,12 @@ todos los dispositivos, lo que garantiza una experiencia fluida y efectiva desde
 de contacto digital. Tu proyecto no solo se verá bien, también generará resultados reales.`
     },
     apps: {
-      default: `Diseño de interfaces para aplicaciones móviles y web tipo SPA, enfocadas en rendimiento, escalabilidad
-y una experiencia fluida. Ya sea una app nativa o progresiva, creo productos funcionales que combinan 
-diseño atractivo con arquitectura eficiente, listos para integrarse con cualquier tecnología o backend.`,
-      benefits: `Obtendrás una aplicación rápida, adaptable y pensada para el usuario final. 
+      default: `Diseño de interfaces para aplicaciones móviles y web tipo SPA, enfocadas en rendimiento, escalabilidad 
+      y una experiencia fluida. Ya sea una app nativa o progresiva, creomos productos funcionales que combinan 
+      un diseño atractivo con una arquitectura eficiente. Además, desarrollo y consumo APIs REST y gestiono bases 
+      de datos modernas, asegurando una integración sólida con cualquier tecnología o backend.
+`,
+      benefits: `Obtendrás una aplicación intuitiva, adaptable y pensada para el usuario final. 
 Con una estructura sólida y un diseño visual coherente, tu app destacará en usabilidad 
 y rendimiento, facilitando la retención, interacción y crecimiento del proyecto.`
     },
