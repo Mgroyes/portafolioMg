@@ -1,0 +1,15 @@
+<!-- src/app/pages/dashboard/servicios/servicios.component.html -->
+<div class="w-full">
+  <div class="flex flex-col sm:flex-row sm:flex-wrap sm:gap-20 border-b border-gray-300 mb-4 w-full items-center sm:items-start max-w-[300px] mx-auto sm:max-w-none">
+    <button (click)="selectTab('ux')" [ngClass]="{ 'font-semibold text-[#0f2c47] border-b-2 border-[#0f2c47]': selectedTab === 'ux', 'text-gray-500 hover:text-[#0f2c47]': selectedTab !== 'ux' }" class="pb-2 text-center w-full sm:w-auto">Diseño UX/UI</button>
+    <button (click)="selectTab('web')" [ngClass]="{ 'font-semibold text-[#0f2c47] border-b-2 border-[#0f2c47]': selectedTab === 'web', 'text-gray-500 hover:text-[#0f2c47]': selectedTab !== 'web' }" class="pb-2 text-center w-full sm:w-auto">Diseño Web</button>
+    <button (click)="selectTab('apps')" [ngClass]="{ 'font-semibold text-[#0f2c47] border-b-2 border-[#0f2c47]': selectedTab === 'apps', 'text-gray-500 hover:text-[#0f2c47]': selectedTab !== 'apps' }" class="pb-2 text-center w-full sm:w-auto">Diseño de aplicaciones</button>
+    <button (click)="selectTab('consultoria')" [ngClass]="{ 'font-semibold text-[#0f2c47] border-b-2 border-[#0f2c47]': selectedTab === 'consultoria', 'text-gray-500 hover:text-[#0f2c47]': selectedTab !== 'consultoria' }" class="pb-2 text-center w-full sm:w-auto">Consultoría</button>
+  </div>
+  <p class="text-gray-700 mb-9 my-9 max-w-4xl text-center md:text-left whitespace-pre-line">
+    {{ currentText }}
+  </p>
+  <button (click)="toggleBenefits()" class="bg-[#003366] text-lime-400 font-semibold px-6 py-2 rounded-md hover:bg-lime-400 hover:text-[#003366] transition-colors duration-300" *ngIf="tabsContent[selectedTab]?.benefits">
+    {{ showBenefits ? 'Volver' : 'Beneficios' }}
+  </button>
+</div>

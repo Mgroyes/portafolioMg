@@ -1,0 +1,15 @@
+/* dashboard.component.css */
+.step {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.active-link {
+  color: #0f2c47;
+  font-weight: bold;
+}
