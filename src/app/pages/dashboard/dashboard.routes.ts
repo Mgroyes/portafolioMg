@@ -1,5 +1,3 @@
-// src/app/pages/dashboard/dashboard.routes.ts
-
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { ServiciosComponent } from './servicios/servicios.component';

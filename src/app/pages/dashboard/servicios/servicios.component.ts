@@ -1,4 +1,3 @@
-// src/app/pages/dashboard/servicios/servicios.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -17,13 +16,13 @@ export class ServiciosComponent {
   tabsContent: Record<TabKey, { default: string; benefits: string }> = {
     ux: {
       default: `Soluciones de diseño centradas en el usuario que combinan estética y funcionalidad.
-Desde la estructuración visual hasta la experiencia interactiva, nos encargamos
-de maquetar interfaces responsivas y diseñar productos digitales intuitivos, listos
-para escalar y adaptarse a cualquier dispositivo.`,
+      Desde la estructuración visual hasta la experiencia interactiva, nos encargamos
+      de maquetar interfaces responsivas y diseñar productos digitales intuitivos, listos
+      para escalar y adaptarse a cualquier dispositivo.`,
       benefits: `Nuestros servicios ayudan a mejorar la experiencia del usuario, aumentar la retención 
-y optimizar la conversión.
-Obtendrás un diseño profesional, coherente con tu marca y alineado con tus objetivos, 
-que no solo se ve bien, sino que también funciona de forma eficiente desde el primer clic. `
+      y optimizar la conversión.
+      Obtendrás un diseño profesional, coherente con tu marca y alineado con tus objetivos, 
+      que no solo se ve bien, sino que también funciona de forma eficiente desde el primer clic. `
     },
     web: {
       default: `Diseño y desarrollo sitios web personalizados, funcionales y adaptables a cualquier dispositivo. 

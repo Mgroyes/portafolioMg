@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 interface Testimonio {
   name: string;
   role: string;
-  avatar: string; // ruta relativa desde /src (p.ej. assets/imgs/...)
+  avatar: string;
   text: string;
 }
 
@@ -21,7 +21,7 @@ export class TestimoniosComponent {
       role: 'Diseñador/Desarrollador',
       avatar: 'assets/imgs/avatar1.png',
       text: `Creo en el diseño que resuelve, en el desarrollo que funciona y en la comunicación clara desde el primer contacto.
-Cada proyecto que tomo lo asumo con compromiso, responsabilidad y enfoque en resultados. Mi objetivo no es solo entregar un producto, sino ayudarte a construir algo que realmente funcione para ti y tus usuarios.`
+      Cada proyecto que tomo lo asumo con compromiso, responsabilidad y enfoque en resultados. Mi objetivo no es solo entregar un producto, sino ayudarte a construir algo que realmente funcione para ti y tus usuarios.`
     },
     {
       name: 'Saray Restrepo',
@@ -31,7 +31,7 @@ Cada proyecto que tomo lo asumo con compromiso, responsabilidad y enfoque en res
     }
   ];
 
-  currentIndex = 0; // ← Ahora coincide con tu HTML
+  currentIndex = 0;
 
   get current() {
     return this.testimonios[this.currentIndex];
@@ -45,7 +45,7 @@ Cada proyecto que tomo lo asumo con compromiso, responsabilidad y enfoque en res
     this.currentIndex = (this.currentIndex + 1) % this.testimonios.length;
   }
 
-  // atajo teclado: flechas izquierda/derecha
+  
   @HostListener('window:keydown', ['$event'])
   handleKeydown(event: KeyboardEvent) {
     if (event.key === 'ArrowLeft') {

@@ -1,27 +1,68 @@
-# PortafolioMg
+# 🎨 PortafolioMg – Landing Page Interactiva con Angular 17
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+PortafolioMg es una landing page moderna, responsiva y profesional desarrollada con Angular 17.  
+Está construida con componentes standalone, una arquitectura modular clara y buenas prácticas de diseño UI/UX. Esta aplicación es ideal como presentación personal, empresarial o portafolio de servicios.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Tecnologías utilizadas
 
-## Code scaffolding
+- Angular 17 (con componentes standalone)
+- TypeScript
+- Taildwind
+- HTML + CSS
+- Angular Router
+- SPA (Single Page Application)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 📦 Funcionalidades implementadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+✅ Landing page de bienvenida con CTA atractivo  
+✅ Navegación tipo SPA entre secciones sin recargas  
+✅ Secciones activas: Servicios, Nosotros, Portafolio, Testimonios  
+✅ Diseño completamente responsive  
+✅ Modularización por carpetas y componentes  
+✅ Navegación con `routerLink` y lógica dinámica (`selectedSection`, `selectedTab`)  
+✅ Código limpio, bien estructurado y mantenible
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📁 Estructura del proyecto
 
-## Running end-to-end tests
+```bash
+src/
+└── app/
+    ├── pages/
+    │   └── dashboard/
+    │       ├── dashboard.component.ts
+    │       ├── dashboard.routes.ts
+    │       ├── servicios/
+    │       ├── nosotros/
+    │       ├── portafolio/
+    │       └── testimonios/
+    └── app.routes.ts
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+HomeComponent: Pantalla inicial con branding y llamado a la acción.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+DashboardComponent: Componente SPA con navegación dinámica por secciones.
+
+Rutas organizadas: dashboard.routes.ts maneja rutas internas específicas.
+
+---
+
+## 🛠️ Instalación y ejecución
+
+Clona este repositorio:
+git clone https://github.com/Mgroyes/PortafolioMg.git
+cd PortafolioMg
+
+---
+
+npm install
+ng serve
+http://localhost:4200
+
+
