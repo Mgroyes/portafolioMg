@@ -47,7 +47,7 @@ y rendimiento, facilitando la retención, interacción y crecimiento del proyect
       default: `Brindamos acompañamiento estratégico en diseño, desarrollo web y experiencia digital. 
 Analizo tu proyecto, identificamos oportunidades de mejora y proponemmos soluciones 
 a medida que se optimizan procesos, diseño y rendimiento digital.`,
-      benefits: `Con mi asesoría, tomarás decisiones más claras y efectivas para tu proyecto. 
+      benefits: `Con nuestra asesoría, tomarás decisiones más claras y efectivas para tu proyecto. 
 Ahorrarás tiempo, evitarás errores comunes y enfocarás tu inversión 
 en lo que realmente genera valor y resultados medibles.`
     }

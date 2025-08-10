@@ -1,6 +1,8 @@
-<!-- Hero / Presentación (mantener intacto) -->
-<div class="w-full flex justify-center px-4 py-32 bg-white">
-  <div class="relative bg-[#EFEFF0] rounded-2xl shadow-md p-6 md:p-20 flex flex-col md:flex-row items-center md:items-start justify-between max-w-6xl w-full overflow-visible pb-40 md:pb-20">
+<!-- Hero / Presentación (ajustado) -->
+<div class="w-full flex justify-center px-4 py-16 md:py-32 bg-white">
+  <div class="relative bg-gray-100 rounded-2xl shadow-md p-6 md:p-20 flex flex-col md:flex-row items-center md:items-start justify-between max-w-6xl w-full overflow-visible pb-12 md:pb-16">
+    
+    <!-- Contenido textual -->
     <div class="z-10 w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-4">
       <img src="assets/imgs/logoo.png" alt="Logo" class="w-12 h-12 object-contain" />
       <h2 class="text-xl md:text-2xl font-bold text-[#0f2c47] leading-tight">
@@ -15,24 +17,123 @@
         Contáctanos
       </button>
     </div>
-    <div class="absolute -bottom-24 left-108 md:left-[500px] w-80 md:w-[800px] z-0">
+
+    <!-- Imagen mockup: posicionamiento condicional -->
+    <!-- En móviles: dentro del flujo -->
+    <div class="block md:hidden mt-10 w-full flex justify-center">
+      <img src="assets/imgs/mockupt.png" alt="Mockup" class="w-72 h-auto object-contain" />
+    </div>
+
+    <!-- En desktop: posición absoluta -->
+    <div class="hidden md:block absolute -bottom-24 left-[500px] w-[800px] z-0">
       <img src="assets/imgs/mockupt.png" alt="Mockup" class="w-full h-auto object-contain" />
     </div>
+
   </div>
 </div>
 
-<!-- Sección principal con sidebar (+ navegación via routerLink) y router-outlet -->
-<section class="w-full flex justify-center px-4 py-8 pb-24 bg-white">
-  <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8">
-    <div class="flex flex-col items-center md:items-start space-y-8 relative">
-      <a [routerLink]="['servicios']" routerLinkActive="active-link" class="step">Servicios</a>
-      <a [routerLink]="['nosotros']" routerLinkActive="active-link" class="step">Nosotros</a>
-      <a [routerLink]="['portafolio']" routerLinkActive="active-link" class="step">Portafolio</a>
-      <a [routerLink]="['testimonios']" routerLinkActive="active-link" class="step">Testimonios</a>
 
+<!-- Sección principal con sidebar (+ navegación via routerLink) y router-outlet -->
+<!-- Sección principal con steps y navegación por routerLink -->
+<section class="w-full flex justify-center px-4 py-1 pb-24  bg-white">
+  <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8">
+
+    <!-- Sidebar Steps -->
+    <div
+      class="flex flex-col md:items-start items-center space-y-8 relative md:space-y-6">
+
+      <!-- Línea vertical solo en desktop -->
+      <div class="hidden md:block absolute left-[19px] top-0 w-[2px] h-[280px] bg-gray-300 z-0"></div>
+
+      <!-- Paso: Servicios -->
+      <a
+        [routerLink]="['servicios']"
+        class="flex items-center space-x-3 relative z-10 group px-3 py-2 rounded-md transition-colors duration-300"
+        [ngClass]="{
+          'bg-gray-100 md:bg-transparent': isActiveRoute('servicios')
+        }">
+        <div class="w-4 h-4 rounded-full transition-transform duration-300 group-hover:scale-125"
+          [ngClass]="{
+            'bg-lime-500': isActiveRoute('servicios'),
+            'bg-[#0f2c47]': !isActiveRoute('servicios')
+          }">
+        </div>
+        <span
+          [ngClass]="{
+            'font-bold text-[#0f2c47]': isActiveRoute('servicios'),
+            'text-lime-500 font-semibold': !isActiveRoute('servicios')
+          }"
+          class="transition-transform duration-300 group-hover:scale-110">Servicios</span>
+      </a>
+
+      <!-- Paso: Nosotros -->
+      <a
+        [routerLink]="['nosotros']"
+        class="flex items-center space-x-3 relative z-10 group px-3 py-2 rounded-md transition-colors duration-300"
+        [ngClass]="{
+          'bg-gray-100 md:bg-transparent': isActiveRoute('nosotros')
+        }">
+        <div class="w-4 h-4 rounded-full transition-transform duration-300 group-hover:scale-125"
+          [ngClass]="{
+            'bg-lime-500': isActiveRoute('nosotros'),
+            'bg-[#0f2c47]': !isActiveRoute('nosotros')
+          }">
+        </div>
+        <span
+          [ngClass]="{
+            'font-bold text-[#0f2c47]': isActiveRoute('nosotros'),
+            'text-lime-500 font-semibold': !isActiveRoute('nosotros')
+          }"
+          class="transition-transform duration-300 group-hover:scale-110">Nosotros</span>
+      </a>
+
+      <!-- Paso: Portafolio -->
+      <a
+        [routerLink]="['portafolio']"
+        class="flex items-center space-x-3 relative z-10 group px-3 py-2 rounded-md transition-colors duration-300"
+        [ngClass]="{
+          'bg-gray-100 md:bg-transparent': isActiveRoute('portafolio')
+        }">
+        <div class="w-4 h-4 rounded-full transition-transform duration-300 group-hover:scale-125"
+          [ngClass]="{
+            'bg-lime-500': isActiveRoute('portafolio'),
+            'bg-[#0f2c47]': !isActiveRoute('portafolio')
+          }">
+        </div>
+        <span
+          [ngClass]="{
+            'font-bold text-[#0f2c47]': isActiveRoute('portafolio'),
+            'text-lime-500 font-semibold': !isActiveRoute('portafolio')
+          }"
+          class="transition-transform duration-300 group-hover:scale-110">Portafolio</span>
+      </a>
+
+      <!-- Paso: Testimonios -->
+      <a
+        [routerLink]="['testimonios']"
+        class="flex items-center space-x-3 relative z-10 group px-3 py-2 rounded-md transition-colors duration-300"
+        [ngClass]="{
+          'bg-gray-100 md:bg-transparent': isActiveRoute('testimonios')
+        }">
+        <div class="w-4 h-4 rounded-full transition-transform duration-300 group-hover:scale-125"
+          [ngClass]="{
+            'bg-lime-500': isActiveRoute('testimonios'),
+            'bg-[#0f2c47]': !isActiveRoute('testimonios')
+          }">
+        </div>
+        <span
+          [ngClass]="{
+            'font-bold text-[#0f2c47]': isActiveRoute('testimonios'),
+            'text-lime-500 font-semibold': !isActiveRoute('testimonios')
+          }"
+          class="transition-transform duration-300 group-hover:scale-110">Testimonios</span>
+      </a>
     </div>
+
+    <!-- Contenido dinámico -->
     <div class="w-full">
       <router-outlet></router-outlet>
     </div>
   </div>
 </section>
+
