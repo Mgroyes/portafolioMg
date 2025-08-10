@@ -25,7 +25,7 @@ export class TestimoniosComponent {
     },
     {
       name: 'Saray Restrepo',
-      role: 'Product Owner / Triidy',
+      role: 'Product Manager / Triidy',
       avatar: 'assets/imgs/avatar2.png',
       text: `Sus diseños y procesos convierten lo funcional en productos agradables para los usuarios, pasando de lo complejo a lo intuitivo, colaborando siempre con la mejor actitud ante los retos que se afrontan.`
     }
